@@ -14,7 +14,7 @@ declare module "http" {
 
 app.use(
   express.json({
-    verify: (req, _res, buf) => {
+    verify: (req: import("http").IncomingMessage, _res: import("http").ServerResponse, buf: Buffer) => {
       req.rawBody = buf;
     },
   }),
@@ -33,15 +33,15 @@ export function log(message: string, source = "express") {
   console.log(`${formattedTime} [${source}] ${message}`);
 }
 
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   const start = Date.now();
   const path = req.path;
   let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
   const originalResJson = res.json;
-  res.json = function (bodyJson, ...args) {
+  res.json = function (bodyJson: any, ...args: any[]) {
     capturedJsonResponse = bodyJson;
-    return originalResJson.apply(res, [bodyJson, ...args]);
+    return originalResJson.apply(res, [bodyJson, ...args] as any);
   };
 
   res.on("finish", () => {
@@ -98,6 +98,20 @@ app.use((req, res, next) => {
     },
     () => {
       log(`serving on port ${port}`);
+
+      // Keep-alive cron job for Render free tier (runs every 14 minutes)
+      const keepAliveUrl = process.env.RENDER_EXTERNAL_URL || process.env.KEEP_ALIVE_URL;
+      if (keepAliveUrl) {
+        log(`Starting keep-alive cron for ${keepAliveUrl}`);
+        setInterval(() => {
+          fetch(`${keepAliveUrl}/api/health`)
+            .then(res => {
+               if(res.ok) log(`Keep-alive ping successful`);
+               else log(`Keep-alive ping returned ${res.status}`);
+            })
+            .catch(err => log(`Keep-alive ping failed: ${err.message}`));
+        }, 14 * 60 * 1000); // 14 minutes
+      }
     },
   );
 })();
