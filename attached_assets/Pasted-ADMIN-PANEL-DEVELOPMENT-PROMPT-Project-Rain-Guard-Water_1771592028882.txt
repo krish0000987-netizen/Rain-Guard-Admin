@@ -1,0 +1,241 @@
+ADMIN PANEL DEVELOPMENT PROMPT
+
+Project: Rain Guard Waterproofing & Painting Website
+Goal: Build a powerful admin panel where owner can edit everything without coding.
+
+🧑‍💻 1. ADMIN LOGIN SYSTEM
+
+Create secure admin login:
+
+Email + Password login
+
+OTP login option
+
+Forgot password
+
+Admin roles (Owner / Staff)
+
+Security:
+✔ SSL secure login
+✔ Auto logout after inactivity
+✔ Activity logs
+
+📄 2. CONTENT MANAGEMENT SYSTEM (CMS)
+
+Admin should be able to edit ALL website text easily.
+
+Editable Sections
+🏠 Home Page
+
+Heading
+
+Subheading
+
+Description
+
+Services list
+
+Why Choose Us points
+
+Phone number
+
+WhatsApp button
+
+Address
+
+Images & videos
+
+Use content like:
+
+👉 Terrace Waterproofing
+👉 Bathroom Leakage Repair
+👉 Crack Filling & Damp Proofing
+👉 Exterior Wall Protection
+👉 Interior & Exterior Painting
+👉 Texture & Designer Paint
+
+Admin can add / edit / delete services anytime.
+
+📌 About Us Page
+
+Editable fields:
+
+Company description
+
+Experience years
+
+Team details
+
+Mission & Vision
+
+Before/After images
+
+🛠️ Services Page
+
+Admin can:
+
+✔ Add new service
+✔ Edit description
+✔ Upload images
+✔ Set price range
+✔ Mark as featured
+
+Example Services:
+
+Terrace Waterproofing
+
+Bathroom Leakage Repair
+
+Wall Putty & Primer
+
+Texture Paint
+
+Crack Repair
+
+⭐ Reviews Section
+
+Admin can:
+
+✔ Add customer reviews
+✔ Approve Google reviews
+✔ Delete fake reviews
+✔ Show rating stars
+
+📞 Contact Page
+
+Admin can edit:
+
+Phone numbers
+
+Email
+
+Address
+
+Google Map location
+
+WhatsApp link
+
+🖼️ 3. IMAGE & VIDEO MANAGEMENT
+
+Admin should be able to:
+
+✔ Upload gallery images
+✔ Before/After photos
+✔ Change homepage banner
+✔ Add project videos
+
+Auto compress images for speed.
+
+📊 4. LEAD MANAGEMENT SYSTEM
+
+When customer fills form:
+
+Admin dashboard shows:
+
+Name
+
+Phone
+
+Service needed
+
+Location
+
+Date
+
+Features:
+
+✔ Call button
+✔ WhatsApp button
+✔ Mark lead as done
+✔ Export to Excel
+
+💰 5. OFFER & COUPON SYSTEM
+
+Admin can create offers:
+
+Discount %
+
+Expiry date
+
+Service specific offer
+
+Example:
+👉 20% Off Terrace Waterproofing
+
+📈 6. ANALYTICS DASHBOARD
+
+Admin sees:
+
+Total visitors
+
+Leads per day
+
+Calls from website
+
+WhatsApp clicks
+
+Most popular service
+
+🎨 7. DESIGN REQUIREMENTS
+
+Admin panel must be:
+
+✔ White modern UI
+✔ Mobile responsive
+✔ Simple buttons
+✔ Hindi + English support
+
+Sections in left menu:
+
+Dashboard
+
+Pages Editor
+
+Services Manager
+
+Reviews
+
+Leads
+
+Images
+
+Offers
+
+Settings
+
+⚙️ 8. SETTINGS PANEL
+
+Admin can change:
+
+Phone number
+
+WhatsApp link
+
+Email
+
+Business name
+
+Logo upload
+
+Social media links
+
+🔐 9. BACKUP & SECURITY
+
+✔ Daily backup
+✔ Google Drive backup
+✔ Spam protection
+✔ reCAPTCHA on forms
+
+🧠 10. FUTURE FEATURES
+
+WhatsApp auto reply bot
+
+AI lead follow-up
+
+SMS alerts
+
+Google review auto request
+
+✅ FINAL INSTRUCTION TO DEVELOPER
+
+“Create a clean, scalable admin panel with CMS where owner can edit all website text, images, services, offers, and leads without coding. Keep UI simple and mobile-friendly.”
